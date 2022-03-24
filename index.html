@@ -249,61 +249,61 @@
       // VARIABLES PARA LOS MENSAJES EN LA EJECUCIÓN DEL JUEGO
       let opcionContinuar = "¿DESEAS CONTINUAR CON LA SIGUIENTE PREGUNTA?\nSi deseas continuar con la siguiente pregunta escribe 'si' y presiona el botón OK.\n Si NO deseas continuar con la siguiente pregunta solo haz clic en el botón OK";
       let noContinuar = `${nombre}, no decidió continuar, obtuvo un total de`;
-      let respuestaIncorrecta = `${nombre} respondió incorrectamente por lo cual perdió el juego y su puntaje acumulado`;
+      let respuestaIncorrecta = `${nombre} respondió incorrectamente por lo cual perdió el juego y su puntaje acumulado.`;
       let diligenciarRespuesta = "Diligencia aquí la respuesta correcta";
 
       // // CONTROL DE FLUJO DEL JUEGO
-      const pregunta1 = prompt(`${muyFacil.pregunta}\n--> ${muyFacil.incorrecta1}\n--> ${muyFacil.incorrecta2}\n--> ${muyFacil.correcta}\n--> ${muyFacil.incorrecta3}`, diligenciarRespuesta)
+      const pregunta1 = prompt(`DIFICULTAD: Muy fácil\n${muyFacil.pregunta}\n--> ${muyFacil.incorrecta1}\n--> ${muyFacil.incorrecta2}\n--> ${muyFacil.correcta}\n--> ${muyFacil.incorrecta3}`, diligenciarRespuesta)
       if (pregunta1.toUpperCase() == muyFacil.correcta) {
         puntaje = puntaje + muyFacil.premio
         continuar = prompt(opcionContinuar, "No")
         if (continuar.toLowerCase() == "si") {
-          pregunta2 = prompt(`${facil.pregunta}\n--> ${facil.incorrecta1}\n--> ${facil.incorrecta2}\n--> ${facil.incorrecta3}\n--> ${facil.correcta}`, diligenciarRespuesta)
+          pregunta2 = prompt(`DIFICULTAD: Fácil\n${facil.pregunta}\n--> ${facil.incorrecta1}\n--> ${facil.incorrecta2}\n--> ${facil.incorrecta3}\n--> ${facil.correcta}`, diligenciarRespuesta)
           if (pregunta2.toUpperCase() == facil.correcta) {
             puntaje = puntaje + facil.premio
             continuar = prompt(opcionContinuar, "No")
             if (continuar.toLowerCase() == "si") {
-              pregunta3 = prompt(`${medio.pregunta}\n--> ${medio.correcta}\n--> ${medio.incorrecta1}\n--> ${medio.incorrecta2}\n--> ${medio.incorrecta3}`, diligenciarRespuesta)
+              pregunta3 = prompt(`DIFICULTAD: Media\n${medio.pregunta}\n--> ${medio.correcta}\n--> ${medio.incorrecta1}\n--> ${medio.incorrecta2}\n--> ${medio.incorrecta3}`, diligenciarRespuesta)
               if (pregunta3.toUpperCase() == medio.correcta) {
                 puntaje = puntaje + medio.premio
                 continuar = prompt(opcionContinuar, "No")
                 if (continuar.toLowerCase() == "si") {
-                  pregunta4 = prompt(`${alto.pregunta}\n--> ${alto.incorrecta1}\n--> ${alto.correcta}\n--> ${alto.incorrecta2}\n--> ${alto.incorrecta3}`, diligenciarRespuesta)
+                  pregunta4 = prompt(`DIFICULTAD: Alta\n${alto.pregunta}\n--> ${alto.incorrecta1}\n--> ${alto.correcta}\n--> ${alto.incorrecta2}\n--> ${alto.incorrecta3}`, diligenciarRespuesta)
                   if (pregunta4.toUpperCase() == alto.correcta) {
                     puntaje = puntaje + alto.premio
                     continuar = prompt(opcionContinuar, "No")
                     if (continuar.toLowerCase() == "si") {
-                      pregunta5 = prompt(`${muyAlto.pregunta}\n--> ${muyAlto.incorrecta1}\n--> ${muyAlto.incorrecta2}\n--> ${muyAlto.incorrecta3}\n--> ${muyAlto.correcta}`, diligenciarRespuesta)
+                      pregunta5 = prompt(`DIFICULTAD: Muy alta\n${muyAlto.pregunta}\n--> ${muyAlto.incorrecta1}\n--> ${muyAlto.incorrecta2}\n--> ${muyAlto.incorrecta3}\n--> ${muyAlto.correcta}`, diligenciarRespuesta)
                       if (pregunta5.toUpperCase() == muyAlto.correcta) {
                         puntaje = puntaje + muyAlto.premio
-                        alert(`felicidades ${nombre}, has ganado el juego con ${puntaje} puntos!!`)
-                        console.log(`${nombre}, ha ganado el juego, acertó todas las preguntas y obtuvo un total de ${puntaje} puntos!!`)
+                        alert(`felicidades ${nombre}, has ganado el juego con ${puntaje} puntos!`)
+                        console.log(`${nombre}, ha ganado el juego, acertó todas las preguntas y obtuvo un total de ${puntaje} puntos!`)
                       } else {
                         console.log(respuestaIncorrecta)
                       }
                     } else {
-                      console.log(`${noContinuar} ${puntaje} puntos`)
+                      console.log(`${noContinuar} ${puntaje} puntos.`)
                     }
                   } else {
                     console.log(respuestaIncorrecta)
                   }
                 } else {
-                  console.log(`${noContinuar} ${puntaje} puntos`)
+                  console.log(`${noContinuar} ${puntaje} puntos.`)
                 }
               } else {
                 console.log(respuestaIncorrecta)
               }
             } else {
-              console.log(`${noContinuar} ${puntaje} puntos`)
+              console.log(`${noContinuar} ${puntaje} puntos.`)
             }
           } else {
             console.log(respuestaIncorrecta)
           }
         } else {
-          console.log(`${noContinuar} ${puntaje} puntos`)
+          console.log(`${noContinuar} ${puntaje} puntos.`)
         }
       } else {
-        console.log(`Respuesta incorrecta ${nombre}, ha finalizado tu turno. No lograste ningún puntaje`)
+        console.log(`${nombre}, Respuesta incorrecta. No lograste ningún puntaje.`)
       }
     }
 
@@ -312,7 +312,7 @@
 
     // VARIABLES DE LOS MENSAJES PARA REPETICIÓN DEL JUEGO 
     let jugarNuevamente = "¿DESEA JUGAR DE NUEVO?\nSi DECIDES jugar de nuevo escribe 'si' y luego haz clic en el botón OK.\nSi NO DECIDES jugar de nuevo solamente haz clic en el botón OK.\nEsta sería la oportunidad";
-    let finalizado = "Ha finalizado el juego";
+    let finalizado = "Ha finalizado el juego.";
     let repetirJuego = prompt(`${jugarNuevamente} 2/5.`, "No")
 
     // CONTROL DE FLUJO PARA JUGAR NUEVAMENTE.
