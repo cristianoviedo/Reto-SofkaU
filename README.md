@@ -1,2 +1,3 @@
 # Reto-SofkaU
-Para la ejecución del reto solo es necesario el index.html ya que la logica se realizó dentro de las etiquetas script aunque no sea buena práctica.
+Solo es necesario el index.html ya que la logica se realizó dentro de las etiquetas script aunque no sea buena práctica.
+Para la ejecución debemos abrir el index.html con algún navegador.
